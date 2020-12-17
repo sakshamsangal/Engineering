@@ -1,4 +1,4 @@
-```javascript
+```text
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -25,3 +25,4 @@ MatSnackBarModule
 MatFormFieldModule
 MatInputModule
 MatIconModule
+```
