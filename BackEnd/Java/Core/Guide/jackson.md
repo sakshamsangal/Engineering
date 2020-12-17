@@ -1,0 +1,24 @@
+[(http://zetcode.com/springboot/json/](http://zetcode.com/springboot/json/)
+
+```
+pom.xml
+src
+    main
+        java   
+            com
+                zetcode
+                    Application.java
+                    config
+                        WebConfig.java
+                    controller
+                        MyController.java
+                    model
+                        City.java
+                    service
+                        CityService.java
+                        ICityService.java
+        resources
+        application.yml
+    test
+        java
+```
