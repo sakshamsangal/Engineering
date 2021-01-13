@@ -1,4 +1,4 @@
-# Controller
+# Rest Controller
 ```java
 @RestController
 @RequestMapping("/locations")

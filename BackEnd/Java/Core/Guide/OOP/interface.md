@@ -61,3 +61,27 @@ class Source implements Interface1, Interface2 {
 
 For reference:
 https://www.geeksforgeeks.org/default-methods-java/
+
+```text
+Hi Aniruddha,
+
+In java 8, we can have an implementation of static and default methods in the interface.
+
+By default, the interface fields are public, static, and final
+
+interface Hello {
+    int a = 3; // public static final
+    public static final int b = 8;
+
+    // Here variable a and b both are same.
+    // By default the interface fields are public, static and final
+}
+class Main implements Hello{
+
+    public static void main(String[] args) {
+        System.out.println(a); // 3
+        System.out.println(b); // 8
+    }
+}
+I hope this helps!
+```

@@ -1,3 +1,4 @@
+## anyMatch
 ```
 import java.util.ArrayList;
 import java.util.List;
@@ -26,15 +27,15 @@ class Student {
 }
 ```
 
+## sum
 ```
 int[] a = {10,20,30,40,50};
 int sum = IntStream.of(a).sum();
 System.out.println("The sum is " + sum);
 ```
 
+## example
 ```
-
-
 import java.util.*;
 import java.util.stream.*;
 
@@ -118,6 +119,82 @@ class Passenger {
         return name;
     }
 }
-
-
 ```
+
+## sort 
+```
+list.sort((o1, o2) -> o1.getSalary() - o2.getSalary()) // ascending
+list.sort((o1, o2) -> o2.getSalary() - o1.getSalary()) // descending
+```
+
+## 3 distinct min in array
+```
+int[] arr
+copy of arr 
+sort 
+print first 3 of arr 
+
+using stream 
+// create stream 
+IntStream.of(arr) 
+
+// process stream 
+.distinct()
+.sort()
+.limit(3)
+
+// consume 
+.forEach(x -> sout(x))
+
+or  
+// process stream 
+.distinct()
+.sort()
+.limit(3)
+.sum 
+
+// consume 
+.getAsInt()
+```
+
+## on objects 
+find 3 highest salary name
+list of employess 
+
+// given 
+employess = list of employess
+
+// create stream
+employess.stream()
+
+// process
+.sorted(Comparator.comparingInt(Employee::getSalary).reversed())
+.filter(x -> isActive(x))
+.limit(3)
+.map(Employee::getName)
+
+
+//consume
+.forEach(x -> sout(x))
+.collect(Collectors.toList())
+
+## name join 
+Collectors.joining(", ")
+
+## group by dept 
+civil -> ram, shyam 
+cs -> saksham, sahitya 
+
+Collectors.groupingBy(x -> x.dept)
+
+
+## count of emp in each dept 
+Collectors.groupingBy(Employee::getDept, Collectors.counting())
+
+## multi threading 
+.parallel()
+
+
+Arrays.stream(arr).sum(); // sum 
+Arrays.stream(arr).filter(x -> x < 4).foreach(print)
+
